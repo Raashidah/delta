@@ -1,0 +1,150 @@
+{% extends "usermaster.html" %}
+{% load static %}
+{% block content %}
+
+
+<div style="background-color: rgb(175, 228, 228);max-height: 600px;margin-top: 20px; padding-left: 100px;">
+    <form class="text-center m-auto ">
+        <br><br>
+        <div class="form-group row ">
+            <label for="formGroupExampleInput" style="width: 150px;">Name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+        </div>
+        <div class=" form-group row">
+            <label for="formGroupExampleInput" style="width: 150px;">Mobile number</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+        </div>
+        <div class="form-group row">
+            <label for="formGroupExampleInput" style="width:    150px;">Email</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+        </div>
+        <div class="form-group row ">
+            <label for="formGroupExampleInput2" style="width: 150px;">Password</label>
+            <input type="password" class="form-control" id="formGroupExampleInput2" style="width: 200px;"> &nbsp;
+            <button type="button" class=" btn-info " data-toggle="modal" data-target="#exampleModal">change</button>
+            <div class="modal fade .modal-sm" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content" style="background-color: rgb(147, 211, 209);">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Change password</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="text-center  ">
+                                <div class="form-group ">
+                                    <label for="formGroupExampleInput">current password</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput">
+                                </div>
+                                <div class="form-group ">
+                                    <label for="formGroupExampleInput2"> New Password</label>
+                                    <input type="password" class="form-control" id="formGroupExampleInput2">
+                                </div>
+                                <div class="form-group ">
+                                    <button class="btn btn-success btn-outline-warning" type="submit"
+                                        style="color: white ;">change</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-grouprow row">
+            <label for="formGroupExampleInput2" style="width: 150px;">Location</label>
+
+            <input type="text" id="formGroupExampleInput2" class="form-control" style="width: 200px;">&nbsp;
+            <button type="submit" class="  btn-info">Add</button>&nbsp;
+            <button type="button" class="  btn-info " data-toggle="modal" data-target="#exampleModal1">change</button>
+            <div class="modal fade .modal-sm" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content" style="background-color: rgb(147, 211, 209);">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Location</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="text-center">
+                                <div class="form-group ">
+                                    <label for="formGroupExampleInput" class="text-center">enter your delivary
+                                        location</label><br>
+                                    <textarea name="" id="formGroupExampleInput" cols="31" rows="4"></textarea>
+                                    <!-- <input type="text" style="height: 200px;" class="form-control" id="formGroupExampleInput"> -->
+                                </div>
+
+                                <div class="form-group ">
+                                    <button class="btn btn-success btn-outline-warning" type="submit"
+                                        style="color: white ;">change</button>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div><br>
+        <div class="form-grouprow row">
+            <label for="formGroupExampleInput2" style="width: 150px;">Account details</label>
+            <input type="text" id="formGroupExampleInput2" class="form-control" style="width: 200px;">&nbsp;
+            <button type="submit" class="  btn-info">Add</button>&nbsp;
+            <button type="button" class="  btn-info " data-toggle="modal" data-target="#exampleModal2">change</button>
+            <div class="modal fade .modal-sm" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content" style="background-color: rgb(147, 211, 209);">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Account details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="text-center  ">
+
+                                <div class="form-group ">
+                                    <label for="formGroupExampleInput" class="text-center">enter your account
+                                        details</label><br>
+                                    <textarea name="" id="formGroupExampleInput" cols="31" rows="4"
+                                        placeholder="debit card number&validity"></textarea>
+
+                                </div>
+                                <div class="form-group ">
+                                    <button class="btn btn-success btn-outline-warning" type="submit"
+                                        style="color: white ;">change</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="form-group row ">
+            <label for="formGroupExampleInput" style="width: 150px;"><br><br></label>
+            
+        </div>
+
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
