@@ -2,8 +2,12 @@
 {% load static %}
 {% block content %}
 
-            <div class="container" style="background-color: rgb(175, 228, 228);max-height: 800px;margin-top: 50px; padding-left: 100px;">
-                <form class="text-center m-auto ">
+<div class="container" style="background-color: rgb(175, 228, 228);margin-top: 50px; margin-bottom: 50px;width: 500px;">
+    <br>
+    
+        <div align="center">
+
+                <form class=" text-center  " >
                     <br><br>
                     <div class="form-group row ">
                         <label for="formGroupExampleInput" style="width: 150px;">Brand</label>
@@ -11,18 +15,18 @@
                             <option VALUE="ALLEN SOLLY">Allen solly</option>
                             <option VALUE="SUGAR">Sugar</option>
                             <option VALUE="ADIDAS">Adidas</option>
-                            
+        
                         </select>
                     </div>
                     <div class="form-group row ">
                         <label for="formGroupExampleInput" style="width: 150px;">Categories</label>
-                        <select name="" id="brand " >
+                        <select name="" id="brand ">
                             <option VALUE="Shirt">Shirt</option>
                             <option VALUE="Shoe-men">Shoe-men</option>
                             <option VALUE="Lipstick">Lipstick</option>
-                            
+        
                         </select>
-                      </div>
+                    </div>
                     <div class="form-group row ">
                         <label for="formGroupExampleInput" style="width: 150px;">Product Name</label>
                         <input type="text" class="form-control" id="formGroupExampleInput" style="width: 250px;">
@@ -41,27 +45,31 @@
                     </div>
                     <div class="form-group row">
                         <label for="formGroupExampleInput" style="width: 150px">size</label>
-                       <div class="form-check">
-                         <input type="checkbox">S&nbsp;   
-                        <input type="checkbox">M    &nbsp;
-                        <input type="checkbox">L &nbsp;   
-                        <input type="checkbox">XL  
-                    </div>           
+                        <div class="form-check">
+                            <input type="checkbox">S&nbsp;
+                            <input type="checkbox">M &nbsp;
+                            <input type="checkbox">L &nbsp;
+                            <input type="checkbox">XL
+                        </div>
+                    </div>
                     <div class="form-group row ">
-                        <label for="formFileMultiple" style="width:150px;">image</label> 
-                        <input type="file" class="form-control" style="background-color: pink;width: 250px;" name="name" multiple> 
-                        
-                        
-                        
+                        <label for="formFileMultiple" style="width:150px;">image</label>
+                        <input type="file" class="form-control" style="background-color: pink;width: 250px;" name="name"
+                            multiple>
+        
+        
+        
                         <!-- <input class="form-control" style="width: 300px;" type="file" id="formFileMultiple" multiple > -->
-                    </div><br>
+                    </div>
                     <div class="form-group row ">
                         <label for="formGroupExampleInput" style="width:150px;"></label>
                         <button type="submit" class="btn btn-info">submit</button>
-                    </div>  
-                      
-                </form>
-            </div>
+                    </div>
+              
+        
+        
+            </form>
         </div>
-
- {% endblock %}
+    
+</div>
+{% endblock %}

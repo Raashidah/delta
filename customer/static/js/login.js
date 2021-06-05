@@ -1,5 +1,4 @@
 
-
 function login(){
    var mobile=Number(document.getElementById("Mobile").value);
    var password=document.getElementById("password").value;

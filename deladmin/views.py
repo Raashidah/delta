@@ -6,8 +6,10 @@ def home(request):
     return render(request,'home.html')
 def adminHome(request):
     return render(request,'adminmaster.html')
-def adminProfile(request):
-    return render(request,'adminprofile.html')
+def deal(request):
+    return render(request,'dealoftheday.html')
+def adddeal(request):
+    return render(request,'adddeal.html')    
 def addProduct(request):
     return render(request,'addproduct.html')
 def brand(request):

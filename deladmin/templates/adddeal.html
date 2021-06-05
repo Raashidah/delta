@@ -1,0 +1,43 @@
+{% extends "adminmaster.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container" style="background-color: rgb(175, 228, 228);max-height: max-content;margin-top: 50px;margin-bottom: 50px; padding-left: 100px;width: 500px;">
+    <form class="text-center m-auto ">
+        <br><br>
+        <div class="form-group row ">
+            <label for="formGroupExampleInput" style="width: 150px;">Brand</label>
+            <select name="" id="brand">
+                <option VALUE="ALLEN SOLLY">Allen solly</option>
+                <option VALUE="SUGAR">Sugar</option>
+                <option VALUE="ADIDAS">Adidas</option>
+                
+            </select>
+        </div>
+        <div class="form-group row ">
+            <label for="formGroupExampleInput" style="width: 150px;">Categories</label>
+            <select name="" id="brand " >
+                <option VALUE="Shirt">Shirt</option>
+                <option VALUE="Shoe-men">Shoe-men</option>
+                <option VALUE="Lipstick">Lipstick</option>
+                
+            </select>
+            </div>
+            <div class="form-group row ">
+                <label for="formGroupExampleInput" style="width: 150px;">product</label>
+                <select name="" id="brand " >
+                    <option VALUE="Shirt">Men's Regular fit Casual Shirt</option>
+                    <option VALUE="Shoe-men">Men's Running Shoese</option>
+                    <option VALUE="Lipstick">Matte Lip Color - 07</option>
+                    
+                </select>
+              
+</div>
+<div class="form-group row " >
+    <label for="" style="width: 150px;"></label>
+<button class="btn btn-info " type="submit"> add</button></div>
+</form><br>
+</div>
+
+
+{% endblock %}

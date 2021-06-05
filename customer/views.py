@@ -11,4 +11,6 @@ def three(request):
 def four(request):
     return render(request,'profile.html')
 def five(request):
-    return render(request,'service.html')    
+    return render(request,'service.html') ,
+def daily(request):
+    return render(request,'dailyoffer.html')   
