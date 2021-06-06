@@ -10,4 +10,5 @@ urlpatterns = [
     path('service',views.five,name='service'),
     path('offer',views.daily,name='offer'),
     
+    
 ]
