@@ -34,24 +34,11 @@
         animation: mymove 5s infinite;
     }
 
-    #div1 {
-        animation-timing-function: linear;
-    }
-
-    @keyframes mymove {
-        from {
-            left: 0px;
-        }
-
-        to {
-            left: 200px;
-        }
-    }
 </style>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light navclr fixed-top">
-        <a class="navbar-brand" href="home"> <img src="{% static 'image/logo.png' %}" width="130" height="40"
+        <a class="navbar-brand" href="main"> <img src="{% static 'image/logo.png' %}" width="130" height="40"
                 alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -121,19 +108,18 @@
                         <li class="nav-item">
                             <a class="nav-link active  bg-info " href="pro" id="col">Profile</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active  bg-info " href="offer" id="col">Daily offer</a>
-                        </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link bg-info" href="#" id="col">Your Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active  bg-info " href="offer" id="col">Daily offer</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link bg-info" href="service" id="col">Customer service</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bg-info" href="home" style="margin-top: 20px;"><button type="button"
-                                    class="btn btn-outline-info btn-primary" style="color: white;">Log out</button>
-                            </a>
+                            <a class="nav-link bg-info" href="home" id="col" style="margin-top: 20px;color: white;">Log out</a>
                         </li>
                     </ul>
 

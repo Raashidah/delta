@@ -8,6 +8,8 @@ def two(request):
     return render(request,'signup.html')
 def three(request):
     return render(request,'usermaster.html')
+def main(request):
+    return render(request,'main.html')
 def four(request):
     return render(request,'profile.html')
 def five(request):
