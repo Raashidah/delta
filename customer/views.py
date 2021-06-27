@@ -16,3 +16,13 @@ def five(request):
     return render(request,'service.html') 
 def daily(request):
     return render(request,'dailyoffer.html')   
+def viewproduct(request):
+    return render(request,'view.html')
+def buyproduct(request):
+    return render(request,'buy.html')
+def addAddress(request):
+    return render(request,'address.html')
+def paymethod(request):
+    return render(request,'paymode.html')
+def placeorder(request):
+    return render(request,'placeorder.html')

@@ -1,0 +1,27 @@
+{% extends "usermaster.html" %}
+{% load static %}
+{% block content %}
+<div class=" container card mb-3" style="width: fit-content;margin-top: 50px;" >
+  <div class="  row" >
+    <div class="col-lg-4">
+      <img src="{% static 'image/crop1.jpg' %}" alt="...">
+    </div>
+    <div class="col-lg-8">
+      <div class="card-body" style="text-align:left">
+        <h5 class="card-title">Crop Top</h5>
+        <ul class="card-text">
+          <li>Rs:550/-</li>
+          <li>Brand:Plado</li>
+          <li>Fabric Material : Premium Cotton </li>
+          <li>Size: S </li>
+          <li>Care Instructions: Hand Wash Only,Do not Bleach ,Do not Dry Clean</li>
+        </ul>
+        <a href="buy"><button type="button" class="btn btn-info">BUY NOW</button></a>
+        <button type="button" class="btn btn-info">Add to cart</button>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

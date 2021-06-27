@@ -10,6 +10,11 @@ urlpatterns = [
     path('pro',views.four,name='pro'),
     path('service',views.five,name='service'),
     path('offer',views.daily,name='offer'),
-    
+    path('view',views.viewproduct,name='view'),
+    path('buy',views.buyproduct,name='buy'),
+    path('address',views.addAddress,name='address'),
+    path('paymode',views.paymethod,name='paymode'),
+    path('placeorder',views.placeorder,name='placeorder'),
+   
     
 ]

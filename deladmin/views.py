@@ -20,3 +20,5 @@ def categories(request):
     return render(request,'categories.html')
 def addItem(request):
     return render(request,'additem.html')
+def addImage(request):
+    return render(request,'addimage.html')

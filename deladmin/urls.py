@@ -11,4 +11,6 @@ urlpatterns = [
     path('addbrand',views.addBrand,name='addbrand'),
     path('items',views.categories,name='items'),
     path('additem',views.addItem,name='additem'),
+    path('image',views.addImage,name='image'),
+    
 ]

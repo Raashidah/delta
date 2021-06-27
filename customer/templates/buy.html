@@ -1,0 +1,41 @@
+{% extends "usermaster.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="container" style="background-color: rgb(175, 228, 228);max-height: 600px;margin-top: 50px;width: 500px;">
+       <small>order will be delivered to this address</small>     
+    <form action="" class="text-center m-auto "> 
+   
+   <div class="form-group row ">
+       <label for="formGroupExampleInput" style="width: 150px;" >Full Name</label>
+       <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;" >
+   </div>
+   <div class="form-group  row">
+       <label for="formGroupExampleInput" style="width: 150px;">Mobile number</label>
+       <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+   </div>
+   <div class=" form-group row">
+       <label for="formGroupExampleInput" style="width:150px;">House number</label>
+       <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+   </div>
+   <div class=" form-group row">
+    <label for="formGroupExampleInput" style="width:150px;">Area/street</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+    </div>
+    <div class=" form-group row">
+        <label for="formGroupExampleInput" style="width:150px;">Landmark</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+    </div>
+    <div class=" form-group row">
+        <label for="formGroupExampleInput" style="width:150px;">City</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+    </div>
+    <a href="address"><button type="submit" class="btn btn-info btn-outline-success" style="color: white;">Add Address</button></a>
+    <div class=" form-group row">
+        <label for="formGroupExampleInput" style="width:150px;"></label>
+        
+    </div>
+</div>
+  
+{% endblock %}

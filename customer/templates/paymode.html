@@ -1,0 +1,65 @@
+{% extends "usermaster.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="container" style="background-color: rgb(175, 228, 228);margin-top: 50px;width: 500px;margin-bottom: 50px;">
+    <h2>Select a payment method</h2>
+    <form action="" style="text-align: left;padding-left: 100px;">
+    <input type="radio" id="card" name="method">CREDIT AND DEBIT CARDS <br><br>
+   <div class="form-group"><input type="text" id="cardnumber" style="display: none;" placeholder="card number">
+</div>
+         <div class="form-group"> <select name="" class="btn btn-light" id="month" style="display: none;">
+            <option value="">Expiry MM</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+              <option value="">9</option>
+              <option value="">10</option>
+              <option value="">11</option>
+              <option value="">12</option>
+          </select>
+       <select name=""  class="btn btn-light" id="year" style="display: none;">
+            <option value="">Expiry YY</option>
+            <option value="">2021</option>
+            <option value="">2022</option>
+            <option value="">2023</option>
+            <option value="">2024</option>
+            <option value="">2025</option>
+            <option value="">2026</option>
+            <option value="">2027</option>
+            <option value="">2028</option>
+            <option value="">2029</option>
+            <option value="">2030</option>
+            <option value="">2031</option>
+         </select></div> 
+        
+     <div class="form-group">   <input type="text" id="cvv" placeholder="Enter CVV" style="display: none;"></div>
+      <input type="radio" id="card1" name="method">PAY ON DELIVERY<br><br>
+     
+<input type="radio" id="netb" name="method">NET BANKING<br>
+
+           <select name="" id="net" class="btn btn-light" style="display: none;">
+            <option value="">Choose an option </option>
+               <option value="">Axis Bank</option>
+               <option value="">SBI</option>
+               <option value="">HDFC Bank</option>
+               <option value="">ICICI</option>
+               <option value="">CANARA Bank</option>
+
+           </select>
+<br><br>
+       
+      <a href="placeorder"> <button type="button" class="btn btn-warning " style="color: white;">Continue</button></a>  
+    <br><br>
+   
+        </form> 
+    </div>
+</div>
+  
+{% endblock %}

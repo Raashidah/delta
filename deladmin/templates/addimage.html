@@ -1,0 +1,46 @@
+{% extends "adminmaster.html" %}
+{% load static %}
+{% block content %}
+<div align="center" class="container" style="background-color: rgb(175, 228, 228);margin-top: 50px;width: 400px;margin-bottom: 50px; ">
+<form class="text-center " style="height: 400px ;">
+                    <br><br>
+                    <div class="form-group row ">
+                        <label for="formGroupExampleInput" style="width: 150px;">Brand</label>
+                        <select name="" id="brand">
+                            <option VALUE="ALLEN SOLLY">zara</option>
+                            <option VALUE="SUGAR">Levis</option>
+                            <option VALUE="ADIDAS">Aurelia</option>
+        
+                        </select>
+                    </div>
+                    <div class="form-group row ">
+                        <label for="formGroupExampleInput" style="width: 150px;">Categories</label>
+                        <select name="" id="brand ">
+                            <option VALUE="Shirt">Crop Top</option>
+                            <option VALUE="Shoe-men"></option>
+                            <option VALUE="Lipstick"></option>
+        
+                        </select>
+                    </div>
+                    <div class="form-group row ">
+                        <label for="formGroupExampleInput" style="width: 150px;">product </label>
+                        <select name="" id="brand ">
+                            <option VALUE="Shirt"></option>
+                            <option VALUE="Shoe-men"></option>
+                            <option VALUE="Lipstick"></option>
+        
+                        </select>
+                    </div>
+                    <div class="form-group row ">
+                        <label for="formFileMultiple" style="width:150px;">Image</label>
+                        <input type="file" class="form-control" style="background-color: pink;width: 230px;" name="name"
+                            multiple>
+                        </div>
+                    <div class="form-group row ">
+                        <label for="formGroupExampleInput" style="width:150px;"></label>
+                        <button type="submit" class="btn btn-info">Add</button>
+                      </div>
+                </form>
+</div>
+
+{% endblock %}
