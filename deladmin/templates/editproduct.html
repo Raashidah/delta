@@ -27,18 +27,19 @@
                             <div class="form-group row ">
                                
                                 <label for="formGroupExampleInput" style="width: 150px;">Categories</label>
-                                <select name="cat" id="cat">
+                                <select name="cat"  id="cat">
                                   
                                 </select>
                                
                             </div>
+                            {% for products in pro %}
                             <div class="form-group row ">
                                 <label for="formGroupExampleInput" style="width: 150px;">Product Name</label>
-                                <input type="text" name="product" class="form-control" id="formGroupExampleInput" style="width: 250px;">
+                                <input type="text" name="product" value="{{products.product_name}}" class="form-control" id="formGroupExampleInput" style="width: 250px;">
                             </div>
                             <div class=" form-group row">
                                 <label for="formGroupExampleInput" style="width: 150px;">price</label>
-                                <input type="text" name="price" class="form-control" id="formGroupExampleInput" style="width: 250px;">
+                                <input type="text" name="price" value="{{products.price}}" class="form-control" id="formGroupExampleInput" style="width: 250px;">
                             </div>
                             <!-- <div class="form-group row">
                                 <label for="formGroupExampleInput"  style="width:150px;">color</label>
@@ -53,7 +54,7 @@
                             </div> -->
                             <div class="form-group row ">
                                 <label for="formGroupExampleInput2" style="width: 150px;">Description</label>
-                                <textarea name="desc" id="" cols="29" rows="5"></textarea> &nbsp;
+                                <textarea name="desc" placeholder="" value="" id="" cols="29" rows="5">{{products.description}}</textarea> &nbsp;
                             </div>
                             <!-- <div class="form-group row">
                                 <label for="formGroupExampleInput" style="width: 150px">size</label>
@@ -66,7 +67,7 @@
                             </div> -->
                             <div class="form-group row">
                                 <label for="formGroupExampleInput" style="width: 150px">Discount</label>
-                                <input type="text" name="discount" id="">
+                                <input type="text"value="{{products.discount}}" name="discount" id="">
                                     
                                 </select>
                             </div>
@@ -75,6 +76,7 @@
                 
                                 <!-- <input class="form-control" style="width: 300px;" type="file" id="formFileMultiple" multiple > -->
                             </div>
+                            {% endfor %}
                             <div class="form-group row ">
                                 <label for="formGroupExampleInput" style="width:150px;"></label>
                                 <button type="submit" class="btn btn-info">submit</button>
