@@ -1,0 +1,77 @@
+{% extends "usermaster.html" %}
+{% load static %}
+{% block content %}
+
+
+        <div class="container" style="background-color: rgb(175, 228, 228);max-height: 600px;margin-top: 50px;width: 500px;">
+            
+                 <form action="/viewpro/" class="text-center m-auto " method="POST"> 
+                <br><br>
+                
+                <div class="form-group row ">
+                    <label for="formGroupExampleInput" style="width: 150px;" >Name</label>
+                    <input type="text" class="form-control" value="{{sprofile.name}}" id="formGroupExampleInput" style="width: 200px;" disabled>
+                </div>
+                <div class="form-group  row">
+                    <label for="formGroupExampleInput" style="width: 150px;">Mobile number</label>
+                    <input type="text" class="form-control" value="{{profile.mobile}}" id="formGroupExampleInput" style="width: 200px;">
+                </div>
+                <div class=" form-group row">
+                    <label for="formGroupExampleInput" style="width:    150px;">Email</label>
+                    <input type="text" class="form-control" value="{{sprofile.email}}" id="formGroupExampleInput" style="width: 200px;">
+                </div>
+                
+                <div class="form-group row ">
+                    <label for="formGroupExampleInput2" style="width: 150px;">Password</label>
+                    <input type="password" class="form-control" value="{{profile.password}}" id="formGroupExampleInput2" style="width: 200px;">
+                    &nbsp;
+                    
+                    <button type="button" class=" btn-info " data-toggle="modal"
+                        data-target="#exampleModal">change</button>
+                    <div class="modal fade .modal-sm" id="exampleModal" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog ">
+                            <div class="modal-content" style="background-color: rgb(147, 211, 209);">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Change password</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="text-center  ">
+                                        <div class="form-group ">
+                                            <label for="formGroupExampleInput">current password</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput">
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="formGroupExampleInput2"> New Password</label>
+                                            <input type="password" class="form-control" id="formGroupExampleInput2">
+                                        </div>
+                                        <div class="form-group ">
+                                            <button class="btn btn-success btn-outline-warning" type="submit"
+                                                style="color: white ;">change</button>
+                                        </div>
+                                    </form>    
+                                    </div>
+                                      
+                                      
+                                    
+
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                    <div >
+                   
+                </div>
+                <div class="form-group row ">
+                    <label for="formGroupExampleInput" style="width: 150px;"><br><br></label>
+                    <a href="/pro/{{sprofile.id}}"> <button type="submit" class="btn btn-success">edit</button></a></div><br>
+                </div>
+            </form>
+        </div>
+  
+
+{% endblock %}

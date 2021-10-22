@@ -1,0 +1,117 @@
+{% extends "adminmaster.html" %}
+{% load static %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- 
+<div class="row container-fluid" style="width: 900px;margin-top: 50px;margin-bottom: 50px; background-color: rgb(176, 241, 236);">
+   <div class="col-md-12" ><br>
+    <h1>PRODUCTS</h1>
+    {% for product in product %}
+    
+   <div class="col-md-4 col-sm-12 "><br>
+    <div class="card" style="width: 17rem;"> 
+      <img src="/deladmin/media/{{product.image}}" class="card-img" alt="..." style="height: 250px;">
+      {% endfor %}
+      <div class="card-body">
+        {% for produc in brand %}
+          <h5 class="card-title">{{produc.product_name}}</h5>
+          
+          
+           <ul>
+               <li>{{produc.brand.brand_name}}</li>
+               <li>{{produc.category.category}}</li>
+               <li>{{produc.price}}</li>
+               
+           </ul>
+          
+           {% endfor %}
+         <p class="card-text">Rs.550/-</p> <a href="view" class="btn btn-primary">view</a> 
+      </div>
+  </div><br>
+
+</div>
+</div>
+</div> -->
+<!-- {% for product in product %}
+<div class="card" style="width: 18rem;">
+    <img src="/deladmin/media/{{product.image}}" class="card-img-top" alt="...">
+    {% for produc in brand %}
+    <div class="card-body">
+        <h5 class="card-title">{{produc.product_name}}</h5>
+          
+          
+        <ul>
+            <li>{{produc.brand.brand_name}}</li>
+            <li>{{produc.category.category}}</li>
+            <li>{{produc.price}}</li>
+            
+        </ul>
+       
+    </div>
+  </div>
+  {% endfor %}
+  {% endfor %} -->
+
+
+
+  <style>
+    .card img{
+        height: 15em;
+        
+    }
+    .card{
+      height: 31em;
+    }
+    .pagination a {
+        color: black;
+    }
+    
+    
+     
+    
+    </style>
+    
+    <div class="container py-3 ml-4 mt-3 mb-3 text-left">
+        <h3>Products:</h3>
+    </div>
+    
+    <section class="container bg-white mb-5">
+      
+    
+      <div class="row p-3">
+        {% for product in product %}
+        {% for produc in brand %}
+    
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
+              
+            <div class="card">
+           
+                <img src="/deladmin/media/{{product.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                 
+                  <h6 class="card-title">{{produc.product_name}}</h6>
+                  <ul>
+                    <li>{{produc.brand.brand_name}}</li>
+                    <li>{{produc.category.category}}</li>
+                    <li>{{produc.price}}</li>
+                    
+                        
+                  </ul>  
+                </div>
+                <div class="card-footer text-left">
+                  <a href="/editpro/{{produc.id}}">  <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></a>
+
+                  <a href="/deleteproduct/{{products.id}}"> <button onclick="return confirm ('Are You Sure ?')" type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i>delete</button></a>  
+    
+                  </div>
+                  
+              </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+    
+       </div>
+   
+    
+    
+ {% endblock %}

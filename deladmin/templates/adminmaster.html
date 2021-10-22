@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+      
     <title>Delta</title>
 </head>
 <style>
@@ -45,12 +45,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    
+                    {{user.username}}
                     <form class="form-inline my-2 my-lg-0 ml-auto ">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search for products"
                             aria-label="Search">
                         <button class="btn  btn-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
+                   
                 </div>
             </nav>
         </div>
@@ -72,10 +73,11 @@
                                     style="Color:white;height: 60px;">Product</a>
                                 <div class="dropdown-menu " style="background-color: rgb(176, 243, 228);"
                                     aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="brand">Brand</a>
-                                    <a class="dropdown-item" href="items">Categories</a>
-                                    <a class="dropdown-item" href="product">Product</a>
-                                    <a class="dropdown-item" href="image">Add image</a>
+                                    <a class="dropdown-item" href="/brand/">Brand</a>
+                                    <a class="dropdown-item" href="/cat/">Categories</a>
+                                    <a class="dropdown-item" href="/product/">Product</a>
+                                    <a class="dropdown-item" href="/image/">Add image</a>
+                                    <a class="dropdown-item" href="/viewprod/">view products</a>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -100,7 +102,7 @@
 
 
             <!-- <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12"></div> -->
-            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 " style="margin-top: 50px;" >
                 {% block content %}
                 {% endblock %}
 
@@ -108,7 +110,7 @@
             <!-- <div class=" col-lg-1 col-md-12 col-sm-12 col-xs-12"><br>.</div>  -->
         </div>
    
-    <!-- <div class="row">
+    <!-- <div class="row" >
         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:rgb(255, 220, 226);">.</div>
     </div> -->
     <!-- <div class="row  text-dark  " style="background-color:rgb(152, 228, 228); ">
@@ -212,19 +214,19 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
--->
+
 </body>
 
 </html>

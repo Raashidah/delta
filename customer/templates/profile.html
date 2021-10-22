@@ -5,25 +5,26 @@
 
         <div class="container" style="background-color: rgb(175, 228, 228);max-height: 600px;margin-top: 50px;width: 500px;">
             
-                 <form action="" class="text-center m-auto "> 
+                 <form action="/update/{{datas.id}}" class="text-center m-auto " method="POST"> 
                 <br><br>
+                {% csrf_token %}
                 <div class="form-group row ">
                     <label for="formGroupExampleInput" style="width: 150px;" >Name</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;" disabled>
+                    <input type="text" class="form-control" name="name" value="{{datas.name}}" id="formGroupExampleInput" style="width: 200px;" >
                 </div>
                 <div class="form-group  row">
                     <label for="formGroupExampleInput" style="width: 150px;">Mobile number</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+                    <input type="text" class="form-control" name="mobile" value="{{data.mobile}}" id="formGroupExampleInput" style="width: 200px;">
                 </div>
                 <div class=" form-group row">
                     <label for="formGroupExampleInput" style="width:    150px;">Email</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" style="width: 200px;">
+                    <input type="text" class="form-control" name="email" value="{{datas.email}}" id="formGroupExampleInput" style="width: 200px;">
                 </div>
                 <div class="form-group row ">
                     <label for="formGroupExampleInput2" style="width: 150px;">Password</label>
-                    <input type="password" class="form-control" id="formGroupExampleInput2" style="width: 200px;">
+                    <input type="password" class="form-control" name="password" value="{{data.password}}" id="formGroupExampleInput2" style="width: 200px;">
                     &nbsp;
-                    <button type="button" class=" btn-info " data-toggle="modal"
+                    <!-- <button type="button" class=" btn-info " data-toggle="modal"
                         data-target="#exampleModal">change</button>
                     <div class="modal fade .modal-sm" id="exampleModal" tabindex="-1"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -49,13 +50,14 @@
                                             <button class="btn btn-success btn-outline-warning" type="submit"
                                                 style="color: white ;">change</button>
                                         </div>
-                                    </form>
+                                    </form> -->
 
 
-                                </div>
+                                <!-- </div>
                             </div>
 
-                        </div>
+                        </div> -->
+                   <a href="/update/{{datas.id}}"></a>     <button type="submit">update</button>
                     </div>
                 </div>
 

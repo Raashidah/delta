@@ -1,11 +1,12 @@
 {% extends "adminmaster.html" %}
 {% load static %}
 {% block content %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
 <div style="background-color: rgb(175, 228, 228);margin-top: 50px;margin-bottom: 50PX; ">
 <br>
     <h1 style="text-align: center;"><b>CATEGORIES</b> </h1>
-    <div  style="padding-right: 100px;"><a href="additem"><button class="btn btn-info float-right"> Add items</button></a></div>
+    <div  style="padding-right: 100px;"><a href="/addcate/"><button class="btn btn-info float-right"> Add items</button></a></div>
     <br><br>
     <div align="center" class="container" >
             <table class="table table-light" style="width: 600px;margin-right: 100px;">
@@ -14,16 +15,24 @@
                         <th scope="col">ID</th>
                         <th scope="col">CATEGORIES</th>
                         <th scope="col">BRAND</th>
-                        <th scope="col"></th>
+                        <th scope="col">edit/del</th>
                     </tr>
                 </thead>
+                {% for data in cate %}
                 <tr>
-                    <td>001</td>
-                    <td>CROP Top</td>
-                    <td>Aurelia</td>
-                    <td><button class=" btn-danger">Edit</button>  <button class=" btn-dark">Remove</button></td>
+                    
+                   
+                    <td>{{data.id}}</td>
+                       
+                    <td>{{data.category}}</td>
+                    
+                    <td>{{data.brand.brand_name}}</td>
+                    <td> <a href="/editcat/{{data.id}}">
+                        <button class=" btn-danger">Edit</button> </a> <a  href="/delcate/{{data.id}}" onclick="return confirm('are you sure you want to delete this item?')"> <button class=" btn-dark">Remove</button></a></td>
+                   
                 </tr>
-                <tr>
+                {% endfor %}
+                <!-- <tr>
                     <TD>002</TD>
                     <td>Jeans</td>
                     <td>Levis</td>
@@ -34,7 +43,7 @@
                     <td>shirt</td>
                     <td>zara</td>
                     <td><button class=" btn-danger">Edit</button>  <button class=" btn-dark">Remove</button></td>
-                </TR>
+                </TR> -->
             </table>
     </div>
 

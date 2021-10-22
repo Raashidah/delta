@@ -1,39 +1,38 @@
 {% extends "adminmaster.html" %}
 {% load static %}
 {% block content %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <div align="center" class="container" style="background-color: rgb(175, 228, 228);margin-top: 50px;width: 400px;margin-bottom: 50px; ">
-<form class="text-center " style="height: 400px ;">
+<form class="text-center " style="height: 400px ;" action="/image/" method="POST" enctype="multipart/form-data">
                     <br><br>
+                    {% csrf_token %}
                     <div class="form-group row ">
                         <label for="formGroupExampleInput" style="width: 150px;">Brand</label>
-                        <select name="" id="brand">
-                            <option VALUE="ALLEN SOLLY">zara</option>
-                            <option VALUE="SUGAR">Levis</option>
-                            <option VALUE="ADIDAS">Aurelia</option>
-        
+                        <select name="brand" id="brand"  onchange="selectcat()">
+                            {% for brand in cate %}
+                            <option value="{{brand.id}}">{{brand.brand_name}}</option>
+                            {% endfor %}
+                            
                         </select>
                     </div>
                     <div class="form-group row ">
                         <label for="formGroupExampleInput" style="width: 150px;">Categories</label>
-                        <select name="" id="brand ">
-                            <option VALUE="Shirt">Crop Top</option>
-                            <option VALUE="Shoe-men"></option>
-                            <option VALUE="Lipstick"></option>
-        
-                        </select>
+                        <select name="cat" id="cate" onchange="selectpro()" style="width: 150px;">
+                           <option value="">select category</option>
+                            </select>
                     </div>
+                    
                     <div class="form-group row ">
                         <label for="formGroupExampleInput" style="width: 150px;">product </label>
-                        <select name="" id="brand ">
-                            <option VALUE="Shirt"></option>
-                            <option VALUE="Shoe-men"></option>
-                            <option VALUE="Lipstick"></option>
+                        <select name="product" id="product">
+                           
         
                         </select>
                     </div>
                     <div class="form-group row ">
                         <label for="formFileMultiple" style="width:150px;">Image</label>
-                        <input type="file" class="form-control" style="background-color: pink;width: 230px;" name="name"
+                        <input type="file" name="file" class="form-control" style="background-color: pink;width: 230px;"
                             multiple>
                         </div>
                     <div class="form-group row ">
@@ -42,5 +41,48 @@
                       </div>
                 </form>
 </div>
-
+<script>
+    $.ajaxSetup({
+ 	 		headers: { "X-CSRFToken": '{{csrf_token}}' }
+		});
+        function selectcat(){
+            $.ajax({
+                url:'/changepro/',
+                type:'POST',
+                data:{
+                    brandid : $('#brand').val()
+                    
+                },
+                success:function(response){
+                   // console.log(response.dataitem)
+                   $('.op1').remove()
+                   for(i=0;i<=response.dataitem.length;i++){
+                       $('#cate').append("<option class='op1' value='"+response.dataitem[i].id+"'>"+response.dataitem[i].category+"</option>")
+                   }
+                
+                }
+            })
+        }
+        
+        function selectpro(){
+            $.ajax({
+                url:'/changeprod/',
+                type:'POST',
+                data:{
+                    
+                    catid : $('#cate').val()
+                },
+                success:function(response){
+                    console.log(response.item)
+                   $('.op').remove()
+                   for(i=0;i<=response.item.length;i++){
+                       $('#product').append("<option class='op' value='"+response.item[i].id+"'>"+response.item[i].product+"</option>")
+                   }
+               
+                
+                }
+            })
+        }
+        
+</script>
 {% endblock %}

@@ -1,22 +1,48 @@
+
 {% extends "usermaster.html" %}
 {% load static %}
 {% block content %}
+<div class="container" style="background-color: rgb(175, 228, 228);margin-top: 50px;width: 500px;">
+    <textarea name="" id="address1" cols="30" rows="10" readonly>Address of Customer</textarea> 
+   <br><br>
 
-
-<div class="container" style="background-color: rgb(175, 228, 228);max-height: 600px;margin-top: 50px;width: 500px;">
-     <input type="radio" >Address of Customer
-
-
-    <br><br>
-
-   
- <a href="paymode"><button type="submit" class="btn btn-info btn-outline-success" style="color: white;">Deliver to this Address</button><br><br>
- </a> <a href="buy"><button type="submit" class="btn btn-light btn-outline-success" style="width: 200px;">Edit Address</button></a>
-   
-    <div class=" form-group row">
-        <label for="formGroupExampleInput" style="width:150px;"></label>
-        
-    </div>
-</div>
+<a href="paymode"><button type="submit" class="btn btn-info btn-outline-success" style="color: white;">Deliver to this Address</button><br><br>
+</a> 
+<input class="btn btn-success " id="show" value="Edit Address" type="button" onclick="return funA(this)" >&nbsp;&nbsp;
+<input class="btn btn-danger " id="cancel" value="cancel" type="button" onclick=" funB()">
   
+<br><br>
+</div>
+
+<script>
+    function funA(button) {  
+        if(button.value=='Edit Address'){
+            document.getElementById("address1").readOnly=false
+            
+            button.value='Update'
+            button.type='submit'
+            console.log(button.type)
+        }
+    }
+    function funB() {  
+        if(document.getElementById("show").value=='Update'){
+            document.getElementById("show").value='Edit Address'
+            document.getElementById("show").type='button'
+            document.getElementById("address1").readOnly=true
+
+        }
+    }
+    // $(document).ready(function() { 
+    //     $("#cancel").click(function() {
+    //         $("#show").html("Edit");                               
+    //     });            
+    // });
+</script>
+
 {% endblock %}
+
+
+
+
+
+
