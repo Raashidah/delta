@@ -116,9 +116,6 @@ def changecato(request):
     dataajson = [{'id':x.id,'category':x.category} for x in data]
     return JsonResponse({'dataitem':dataajson})
 
-
-    return render(request,'addproduct.html')
-
 def addProduct(request):
     #cate=category.objects.select_related('brand')
     cate=brand.objects.all()
@@ -158,15 +155,17 @@ def addImage(request):
             imgobj=image(product_id=product,image=file_name)
             imgobj.save()
         return render(request,'addimage.html',{"cate":cate})
+        
 def viewProduct(request):
     prod=image.objects.all()
     brands=product.objects.all()
     return render(request,'viewproduct.html',{"product":prod,"brand":brands})
 
 def editproduct(request,id):    
-    pro=product.objects.filter(id=id)
-    brands=brand.objects.all()
-    return render(request,'editproduct.html',{"pro":pro,"brand":brands}) 
+    pro=product.objects.get(id=id)
+    br=brand.objects.all()
+    return render(request,'editproduct.html',{"prod":pro,"brands":br})
+        
 def updateprod(request,id):
     if request.method=='POST':
         catname=request.POST['cat']
@@ -176,4 +175,15 @@ def updateprod(request,id):
         desc=request.POST['desc']
         discount=request.POST['discount']
         product.objects.filter(id=id).update(brand_id=brandname,category_id=catname,product_name=prod,price=price,description=desc,discount=discount)
-        return redirect('viewprod')         
+        return redirect('viewprod')       
+
+def item(request,id): 
+    pro=product.objects.get(id=id)
+    prod=image.objects.filter(product_id=pro)
+    for x in prod:
+        mainimage=x.image
+    return render(request,'item.html',{"prod":pro,"img":prod,"imge":mainimage})
+def deleteprod(request,id):
+    product.objects.get(id=id).delete()
+    return redirect('viewprod')     
+

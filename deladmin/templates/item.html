@@ -1,0 +1,64 @@
+{% extends "adminmaster.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/item.css' %}">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+<div class="container" style="background-color: rgb(242, 247, 247);margin-top: 50px;margin-bottom: 50px; width: 700px">
+
+
+    <a href="/viewprod/">back</a>
+    <section class=" container sproduct ">
+
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-12 col-12 ">
+                
+                <img src="/deladmin/media/{{imge}}" alt="" srcset="" id="MainImg" class="img-fluid w-100 pb-1">
+                
+                
+                <div class="small-img-group">
+                    {% for img in img %}
+                    <div class="small-img-col">
+
+                        <img src="/deladmin/media/{{img.image}}" alt="" width="100%" srcset="" class="small-img">
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12 col-12 mt-5">
+                <ul>
+                    <li>
+                        <h2>{{prod.product_name}}</h2>
+                    </li>
+                    <li>Price:{{prod.price}}/-</li>
+                    <li>{{prod.description}}</li>
+                </ul>
+            </div>
+
+    </section>
+
+
+
+    <script>
+        var MainImg = document.getElementById('MainImg');
+        var smallimg = document.getElementsByClassName('small-img')
+
+        smallimg[0].onclick = function () {
+            MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function () {
+            MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function () {
+            MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function () {
+            MainImg.src = smallimg[3].src;
+        }
+    </script>
+
+
+    {% endblock %}

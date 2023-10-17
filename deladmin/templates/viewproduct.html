@@ -79,39 +79,39 @@
       
     
       <div class="row p-3">
-        {% for product in product %}
-        {% for produc in brand %}
-    
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 ">
-              
+        
+              {% for produc in brand %}
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 ">
+             
             <div class="card">
-           
                 <img src="/deladmin/media/{{product.image}}" class="card-img-top" alt="...">
+               
                 <div class="card-body">
-                 
+                   
                   <h6 class="card-title">{{produc.product_name}}</h6>
                   <ul>
-                    <li>{{produc.brand.brand_name}}</li>
-                    <li>{{produc.category.category}}</li>
-                    <li>{{produc.price}}</li>
-                    
-                        
-                  </ul>  
+                    <li>Brand:{{produc.brand.brand_name}}</li>
+                    <li>item:{{produc.category.category}}</li>
+                    <li>price:{{produc.price}}</li>  
+                  </ul>    
                 </div>
                 <div class="card-footer text-left">
+                  <a href="/item/{{produc.id}}">  <button type="button" class="btn btn-success"><i class="fas fa-edit"></i> view</button></a>
                   <a href="/editpro/{{produc.id}}">  <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button></a>
-
-                  <a href="/deleteproduct/{{products.id}}"> <button onclick="return confirm ('Are You Sure ?')" type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i>delete</button></a>  
-    
+                  <a href="/deleteproduct/{{produc.id}}"> <button onclick="return confirm ('Are You Sure ?')" type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i>delete</button></a>  
+                  
                   </div>
                   
               </div>
-          </div>
-          {% endfor %}
-          {% endfor %}
+              </div>
+              {% endfor %}
+        </div>
+          
+         
+        
     
-       </div>
+      </div>
    
-    
+    </section>
     
  {% endblock %}

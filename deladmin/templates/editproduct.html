@@ -10,14 +10,14 @@
             
                 <div  class="container " >
         
-                        <form class=" text-center"   align="center" action="/updatepro/{{pro.id}}" method="POST">
+                        <form class=" text-center"   align="center" action="/updatepro/{{prod.id}}" method="POST">
                             <br><br>
                             {% csrf_token %}
                             <div class="form-group row ">
                                 
                                 <label for="formGroupExampleInput" style="width: 150px;">Brand</label>
                                 <select name="brand" id="brand" onclick="Changecat()" >
-                                    {% for data in brand %}      
+                                    {% for data in brands %}      
                             <option value="{{data.id}}">{{data.brand_name}}</option>
                             {% endfor %}
                 
@@ -32,14 +32,14 @@
                                 </select>
                                
                             </div>
-                            {% for products in pro %}
+                            
                             <div class="form-group row ">
                                 <label for="formGroupExampleInput" style="width: 150px;">Product Name</label>
-                                <input type="text" name="product" value="{{products.product_name}}" class="form-control" id="formGroupExampleInput" style="width: 250px;">
+                                <input type="text" name="product" value="{{prod.product_name}}" class="form-control" id="formGroupExampleInput" style="width: 250px;">
                             </div>
                             <div class=" form-group row">
                                 <label for="formGroupExampleInput" style="width: 150px;">price</label>
-                                <input type="text" name="price" value="{{products.price}}" class="form-control" id="formGroupExampleInput" style="width: 250px;">
+                                <input type="text" name="price" value="{{prod.price}}" class="form-control" id="formGroupExampleInput" style="width: 250px;">
                             </div>
                             <!-- <div class="form-group row">
                                 <label for="formGroupExampleInput"  style="width:150px;">color</label>
@@ -54,7 +54,7 @@
                             </div> -->
                             <div class="form-group row ">
                                 <label for="formGroupExampleInput2" style="width: 150px;">Description</label>
-                                <textarea name="desc" placeholder="" value="" id="" cols="29" rows="5">{{products.description}}</textarea> &nbsp;
+                                <textarea name="desc" placeholder="" value="" id="" cols="29" rows="5">{{prod.description}}</textarea> &nbsp;
                             </div>
                             <!-- <div class="form-group row">
                                 <label for="formGroupExampleInput" style="width: 150px">size</label>
@@ -67,7 +67,7 @@
                             </div> -->
                             <div class="form-group row">
                                 <label for="formGroupExampleInput" style="width: 150px">Discount</label>
-                                <input type="text"value="{{products.discount}}" name="discount" id="">
+                                <input type="text"value="{{prod.discount}}" name="discount" id="">
                                     
                                 </select>
                             </div>
@@ -76,7 +76,7 @@
                 
                                 <!-- <input class="form-control" style="width: 300px;" type="file" id="formFileMultiple" multiple > -->
                             </div>
-                            {% endfor %}
+                          
                             <div class="form-group row ">
                                 <label for="formGroupExampleInput" style="width:150px;"></label>
                                 <button type="submit" class="btn btn-info">submit</button>

@@ -17,6 +17,9 @@ urlpatterns = [
     path('address',views.addAddress,name='address'),
     path('paymode',views.paymethod,name='paymode'),
     path('placeorder',views.placeorder,name='placeorder'),
+    path('items/<int:id>',views.items,name='items'),
+    
+   
    
     
 ]

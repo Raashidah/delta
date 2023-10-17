@@ -1,9 +1,8 @@
-
-
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.urls.resolvers import LocaleRegexDescriptor
 from . models import login,signup
+from deladmin . models import * 
 
 # Create your views here.
 def home(request):
@@ -76,12 +75,21 @@ def updatedata(request,id):
         login.objects.filter(id=id).update(mobile=mobile,password=password)
         signup.objects.filter(id=id).update(name=name,email=email)
         return redirect('viewpro')   
+
 def five(request):
     return render(request,'service.html') 
 def daily(request):
     return render(request,'dailyoffer.html')   
 def viewproduct(request):
-    return render(request,'view.html')
+    prod=image.objects.all()
+    brands=product.objects.all()
+    return render(request,'delpro.html',{"product":prod,"brand":brands})
+def items(request,id): 
+    pro=product.objects.get(id=id)
+    prod=image.objects.filter(product_id=pro)
+    for x in prod:
+        mainimage=x.image
+    return render(request,'items.html',{"prod":pro,"img":prod,"imge":mainimage})    
 def buyproduct(request):
     return render(request,'buy.html')
 def addAddress(request):

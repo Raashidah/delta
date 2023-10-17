@@ -28,7 +28,8 @@
                     
                     <td>{{data.brand.brand_name}}</td>
                     <td> <a href="/editcat/{{data.id}}">
-                        <button class=" btn-danger">Edit</button> </a> <a  href="/delcate/{{data.id}}" onclick="return confirm('are you sure you want to delete this item?')"> <button class=" btn-dark">Remove</button></a></td>
+                        <button class=" btn-danger">Edit</button> </a>
+                     <a  href="/delcate/{{data.id}}" onclick="return confirm('are you sure you want to delete this item?')"> <button class=" btn-dark">Remove</button></a></td>
                    
                 </tr>
                 {% endfor %}
